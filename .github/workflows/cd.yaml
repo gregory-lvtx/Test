@@ -2,14 +2,14 @@ name: Hello World Workflow
 
 on:
   workflow_dispatch:
-  inputs:
-      environment:
-        description: 'Environment'
-        type: choice
-        required: true
-        options:
-          - staging
-          - production
+    inputs:
+        environment:
+          description: 'Environment'
+          type: choice
+          required: true
+          options:
+            - staging
+            - production
 
 
 jobs:
