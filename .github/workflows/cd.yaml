@@ -2,12 +2,22 @@ name: Hello World Workflow
 
 on:
   workflow_dispatch:
+  inputs:
+      environment:
+        description: 'Environment'
+        type: choice
+        required: true
+        options:
+          - staging
+          - production
+
 
 jobs:
   hello_world:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     
     steps:
       
       - name: Print Hello World
-        run: echo "Hello, World!"
+        run: echo ${{ secrets.CONFLUENCE_TOKEN }}
