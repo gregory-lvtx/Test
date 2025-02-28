@@ -20,4 +20,4 @@ jobs:
     steps:
       
       - name: Print Hello World
-        run: echo ${{ secrets.CONFLUENCE_TOKEN }}
+        run: echo ${{ vars.OPENAI_TOKEN }}
